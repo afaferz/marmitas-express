@@ -8,7 +8,7 @@ export default <Partial<Config>>{
         sans: ["Lato", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#1f1f1f",
+        primary: "#121212",
         secondary: "#82BC34",
         "black-2th": `#0a0909`,
         white: "#f8fafc",

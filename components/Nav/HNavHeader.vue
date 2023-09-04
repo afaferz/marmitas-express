@@ -16,14 +16,14 @@ export default defineComponent({
 </script>
 <template>
   <nav
-    class="nav h-full w-full flex flex-row items-center justify-around p-2 mx-auto z-9 lg:py-0"
+    class="nav h-full w-full flex flex-row items-center justify-around p-2 mx-auto z-10 lg:py-0"
   >
     <NuxtLink to="/">
       <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" />
     </NuxtLink>
     <DSButtonHambuguerDotHamburguerDot />
     <div
-      class="menu header invisible opacity-0 h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-9 
+      class="menu header invisible opacity-0 h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-10
       md:px-28 lg:opacity-100 lg:scale-y-100 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
     >
       <div

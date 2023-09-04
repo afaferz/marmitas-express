@@ -13,9 +13,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="p-8 lg:text-center mx-auto w-full px-4 lg:w-3/4">
-    <div class="bg-primary p-4 skew-x-12">
-      <h4 class="text-4xl font-bold text-white --subtitle lg:text-6xl">
+  <div class="p-8 pt-16 lg:text-center mx-auto w-full px-4 lg:w-3/4">
+    <div class="pt-4">
+      <h4 class="text-3xl text-center font-bold text-white --subtitle lg:text-6xl">
         Conheça nossos planos
       </h4>
     </div>
@@ -26,6 +26,7 @@ export default defineComponent({
         v-for="(item, index) in items"
         :key="index"
         :item="item"
+        :inverse="index % 2 === 1"
       />
     </div>
   </div>

@@ -13,7 +13,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <header class="header h-16 w-full bg-primary">
+  <header class="header h-16 w-full fixed bg-primary z-10">
     <NavHNavHeader :items="navbar" />
   </header>
 </template>
