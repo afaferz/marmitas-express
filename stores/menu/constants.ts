@@ -20,7 +20,7 @@ const ENTERPRISE_SUBMENU_ITEMS = [
     submenu: []
   },
   {
-    name: "Investimento, Patrimônio e Estatística", // 4
+    name: "Investimento, Patrimônio & Estatística", // 4
     href: "/viva/investimento-patrimonio-e-estatística",
     nuxtLink: true,
     submenu: []
@@ -38,7 +38,7 @@ const ENTERPRISE_SUBMENU_ITEMS = [
     submenu: []
   },
   {
-    name: "Educação Financeira e Previdenciária", // 7
+    name: "Educação Financeira & Previdenciária", // 7
     href: "/viva/educacao-financeira-e-previdenciaria",
     nuxtLink: true,
     submenu: []

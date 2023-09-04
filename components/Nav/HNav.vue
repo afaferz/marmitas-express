@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="nav h-full w-full flex flex-row items-center justify-around p-2 mx-auto z-9 lg:py-2"
+    class="nav h-full w-full flex flex-row items-center justify-around p-2 mx-auto z-9 lg:py-0"
   >
     <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" />
     <DSButtonHambuguerDotHamburguerDot />
@@ -32,16 +32,16 @@
           </div>
         </button>
         <ul
-          class="menu__submenu invisible px-2 translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 lg:group-hover:block lg:visible lg:absolute lg:top-14 lg:block lg:bg-primary lg:h-0 lg:translate-x-0 lg:scale-x-0 z-9"
+          class="menu__submenu invisible px-2 translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 z-9 lg:group-hover:block lg:visible lg:absolute lg:top-14 lg:block lg:bg-primary lg:h-0 lg:translate-x-0 lg:scale-x-0 lg:auto"
           v-if="item.submenu.length > 0"
         >
           <li
             v-for="subitem in item.submenu"
             :key="subitem.name"
-            class="py-3 text-white"
+            class="py-3 text-white w-full"
           >
             <NuxtLink
-              class="block p-1 h-full"
+              class="block p-1 h-full w-full whitespace-nowrap hover:bg-secondary hover:rounded-sm"
               active-class="menu__link--active"
               exact-active-class="menu__link--exact-active"
               :to="subitem.href"
