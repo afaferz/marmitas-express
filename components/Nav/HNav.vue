@@ -5,8 +5,7 @@
     <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" />
     <DSButtonHambuguerDotHamburguerDot />
     <div
-      class="menu invisible h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen overflow-y-scroll px-10 py-6 z-10 lg:px-0"
-      :class="`lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1`"
+      class="menu invisible h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-10 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
     >
       <div
         class="menu__item group flex flex-col items-start w-full mx-auto text-secondary lg:after:bg-secondary lg:h-full lg:visible lg:w-auto lg:inline-block lg:text-white"
@@ -15,6 +14,7 @@
       >
         <button
           class="menu__link cursor-pointer w-full p-2 flex flex-row h-full items-center lg:max-w-fit"
+          :tabindex="!item.nuxtLink ? '0' : '1'"
         >
           <NuxtLink
             class="lg:w-auto"
@@ -22,6 +22,7 @@
             exact-active-class="menu__link--exact-active"
             :to="item.href"
             v-if="item.nuxtLink"
+            tabindex="0"
           >
             {{ item.name }}
           </NuxtLink>
@@ -30,18 +31,21 @@
             <span v-if="!item.nuxtLink"></span>
           </div>
         </button>
-        <ul class="menu__submenu px-2 lg:absolute lg:top-10 lg:group-hover:block lg:block lg:bg-primary" v-if="item.submenu.length > 0">
+        <ul
+          class="menu__submenu invisible px-2 translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 lg:group-hover:block lg:visible lg:absolute lg:top-14 lg:block lg:bg-primary lg:h-0 lg:translate-x-0 lg:scale-x-0 z-9"
+          v-if="item.submenu.length > 0"
+        >
           <li
             v-for="subitem in item.submenu"
             :key="subitem.name"
             class="py-3 text-white"
-            tabindex="0"
           >
             <NuxtLink
               class="block p-1 h-full"
               active-class="menu__link--active"
               exact-active-class="menu__link--exact-active"
               :to="subitem.href"
+              tabindex="0"
             >
               {{ subitem.name }}
             </NuxtLink>
@@ -85,6 +89,14 @@ export default defineComponent({
   &:hover::after {
     width: 95%;
   }
+  &:hover > .menu__submenu {
+    visibility: inherit;
+    transform: translate(0, 0);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 350ms;
+    opacity: 1;
+    height: auto;
+  }
   .menu__link {
     user-select: none;
   }
@@ -98,23 +110,15 @@ export default defineComponent({
     border-left: 6px solid transparent;
   }
   .menu__submenu {
-    // height: 0;
-    // visibility: hidden;
-    // transform: scaleX(0) scaleY(0) translateX(-100vw);
-    // transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-    // transition-duration: 75ms;
-    // opacity: 0;
-    visibility: inherit;
-    transform: scaleX(1) scaleY(1) translate(0, 0);
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: 350ms;
-    opacity: 1;
-    height: auto;
+    height: 0;
+    visibility: hidden;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 75ms;
+    opacity: 0;
   }
   .menu__link ~ .menu__submenu:focus-within,
   .menu__link:focus ~ .menu__submenu {
     visibility: inherit;
-    transform: scaleX(1) scaleY(1) translate(0, 0);
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transition-duration: 350ms;
     opacity: 1;
