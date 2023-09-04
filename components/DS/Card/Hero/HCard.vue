@@ -41,12 +41,10 @@ export default defineComponent({
             {{ item.description }}
           </p>
         </div>
-        <div
-          class="card__action p-4"
-          tabindex="-1"
-        >
+        <div class="card__action p-4" tabindex="-1">
           <DSButtonMainHButton
             :icon="['fas', 'arrow-right']"
+            :icon-class="['text-secondary']"
             class="p-2 w-full text-left group-hover:bg-primary group-hover:text-white rounded"
             tabindex="0"
           >
@@ -61,25 +59,6 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-.card-wrapper {
-  // background: rgb(10, 9, 9);
-  // background: -moz-linear-gradient(
-  //   175deg,
-  //   rgba(10, 9, 9, 0) 26.75%,
-  //   rgba(130, 188, 52, 1) 30%
-  // );
-  // background: -webkit-linear-gradient(
-  //   175deg,
-  //   rgba(10, 9, 9, 0) 26.75%,
-  //   rgba(130, 188, 52, 1) 30%
-  // );
-  // background: linear-gradient(
-  //   175deg,
-  //   rgba(10, 9, 9, 0) 26.75%,
-  //   rgba(130, 188, 52, 1) 30%
-  // );
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0909",endColorstr="#82bc34",GradientType=1);
-}
 .card__img {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
