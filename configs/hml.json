@@ -1,0 +1,7 @@
+{
+    "system": {
+        "environment": "hml",
+        "debug": true,
+        "version" : "1.0.0"
+    }
+}

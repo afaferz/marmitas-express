@@ -1,0 +1,65 @@
+{
+    "assets": {
+        "brands": {
+            "xpi": "https://cdn.xpi.com.br/securityservices/general/brands/xpi.svg",
+            "rico": "https://cdn.xpi.com.br/securityservices/general/brands/rico.svg",
+            "clear": "https://cdn.xpi.com.br/securityservices/general/brands/clear.svg"
+        },
+        "platformIdentifyUrl": "https://cdn.xpi.com.br/securityservices/pages/platform-identify.html"
+    },
+    "brandNames": {
+        "xpi": "XPI",
+        "xp": "XPI",
+        "rico": "Rico",
+        "hub": "Hub"
+    },
+    "productSetup": {
+        "permissionNames": {
+            "lockAccount": "enable-lock-account",
+            "unlockAccount": "enable-unlock-account",
+            "enableToken": "enable-token-enable",
+            "disableToken": "enable-token-disable",
+            "markRisk": "enable-mark-risk",
+            "unmarkRisk": "enable-unmark-risk",
+            "resetPwdSms": "reset-pwd-sms",
+            "resetPwdEmail": "reset-pwd-email",
+            "resetPwdWhatsApp": "reset-pwd-whatsapp",
+            "tokenReset": "token-reset",
+            "resetSignSms": "reset-sign-sms",
+            "resetSignEmail": "reset-sign-email"
+        },
+        "accessMaintenance": {
+            "api": "https://api.xpi.com.br/corporate-authentication-accesscontroller/v1",
+            "brands": ["XP", "Clear", "Rico"],
+            "block": "/api/auth0/user/{username}/blocked-by-fraud-prevention-policy",
+            "legacyBlock": "/api/legacy/account/{accountCode}/approved",
+            "unblock": "/api/auth0/user/{username}/blocked-by-fraud-prevention-policy",
+            "legacyUnblock": "/api/legacy/account/{accountCode}/approved",
+            "legacyBypass": "/api/legacy/accounts/mfa/bypass",
+            "bypass": "/api/auth0/user/{username}/mfa/bypass",
+            "password": "/api/auth0/user/{username}/password/reset",
+            "legacyPassword": "/api/legacy/account/{accountCode}/send-password/{channel}",
+            "signature": "/api/legacy/account/{accountCode}/send-signature/{channel}",
+            "tokenReset": "/api/auth0/user/{username}/token/reset",
+            "legacyTokenReset": "/api/legacy/account/{accountCode}/token/reset",
+            "user": "/api/user/{brand}/{username}",
+            "highRisk": "/api/auth0/user/{username}/high-risk",
+            "features": {
+                "riskAccount": true,
+                "jointAccount": false,
+                "clearMigration" : true
+            },
+            "apimSubscriptionKey": "4099b36f826749e1acab295989795688",
+            "clear": {
+                "bypass": "/api/clear/user/{accountCode}/mfa/bypass",
+                "tokenReset": "/api/clear/user/{username}/token/reset"
+            }
+        },
+        "api": "https://apis.xpi.com.br/product-setup-service/"
+    },
+    "system": {
+        "environment": "prd",
+        "debug": false,
+        "version": "prd-version"
+    }
+}

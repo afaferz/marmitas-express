@@ -1,47 +1,47 @@
-import { MenuItems } from "./types";
+import { Menu } from "~/models/menu";
 
 const ENTERPRISE_SUBMENU_ITEMS = [
   {
     name: "Quem Somos", // 1
     href: "/viva/quem-somos",
     nuxtLink: true,
-    submenu:[]
+    submenu: [],
   },
   {
     name: "Nossa História", // 2
     href: "/viva/nossa-historia",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Estrutura Organizacional", // 3
     href: "/viva/estrutura-organizacional",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Investimento, Patrimônio & Estatística", // 4
     href: "/viva/investimento-patrimonio-e-estatística",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Documentos Institucionais", // 5
     href: "/viva/documentos-institucionais",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Fique por dentro", // 6
     href: "/viva/fique-por-dentro",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Educação Financeira & Previdenciária", // 7
     href: "/viva/educacao-financeira-e-previdenciaria",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
 ];
 const ADDICTION_SUBMENU_ITEMS = [
@@ -49,25 +49,25 @@ const ADDICTION_SUBMENU_ITEMS = [
     name: "Viva Empresarial", // 1
     href: "/adesao/viva-empresarial",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Viva Futuro", // 2
     href: "/adesao/viva-futuro",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "ANAPARprev", // 3
     href: "/adesao/anaparprev",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "IBAprev", // 4
     href: "/adesao/ibaprev",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
 ];
 const PARTICIPANT_SUBMENU_ITEMS = [
@@ -75,25 +75,25 @@ const PARTICIPANT_SUBMENU_ITEMS = [
     name: "Viva Empresarial", // 1
     href: "/participante/viva-empresarial",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Viva Futuro", // 2
     href: "/participante/viva-futuro",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "ANAPARprev", // 3
     href: "/participante/anaparprev",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "IBAprev", // 4
     href: "/participante/ibaprev",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
 ];
 const MAIN_MENU_ITEMS = [
@@ -113,13 +113,13 @@ const MAIN_MENU_ITEMS = [
     name: "Soluções", // 3
     href: "/solucoes",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Parceiros", // 4
     href: "/parceiros",
     nuxtLink: true,
-    submenu: []
+    submenu: [],
   },
   {
     name: "Área do Participante", // 5
@@ -127,6 +127,6 @@ const MAIN_MENU_ITEMS = [
     nuxtLink: false,
     submenu: PARTICIPANT_SUBMENU_ITEMS,
   },
-] satisfies MenuItems[];
+] satisfies Menu.Navbar[];
 
 export { MAIN_MENU_ITEMS };
