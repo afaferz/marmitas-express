@@ -26,6 +26,20 @@ export default defineComponent({
     <div class="lg:col-span-1">
       <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" class="px-10" />
     </div>
+    <div class="lg-col-span-2">
+      <div class="flex flex-col gap-4 px-10 lg:flex-row">
+        <DSButtonMainHButton
+          class="bg-secondary text-white uppercase rounded-md w-full h-12 lg:h-8"
+        >
+          <NuxtLink to="/"> Consulte seu plano </NuxtLink>
+        </DSButtonMainHButton>
+        <DSButtonMainHButton
+          class="bg-secondary text-white uppercase rounded-md w-full h-12 lg:h-8"
+        >
+          <NuxtLink to="/"> Acompanhe seu processo </NuxtLink>
+        </DSButtonMainHButton>
+      </div>
+    </div>
     <div
       class="menu footer h-auto max-h-max flex flex-col items-center gap-4 w-screen bg-primary px-10 z-9 lg:items-start lg:flex-row lg:w-full lg:pt-0 lg:col-span-2"
     >
@@ -126,7 +140,10 @@ export default defineComponent({
         <span>0800 720 5600 - Agendamento</span>
       </div>
       <div class="flex flex-col gap-4 w-full items-start py-2">
-        <DSButtonMainHButton :icon="['fas', 'user']" class="p-2 bg-secondary rounded">
+        <DSButtonMainHButton
+          :icon="['fas', 'user']"
+          class="p-2 bg-secondary rounded"
+        >
           <NuxtLink to="/contato" class="inline-block h-full">
             Outros > Fale Conosco
           </NuxtLink>
@@ -157,7 +174,9 @@ export default defineComponent({
       Vivaprev S.A. CNPJ: 18.868.955.0001/20
     </span>
   </div>
-  <div class="author-label px-10">by &copy; <a href="/" target="_blank">Natus Ak</a></div>
+  <div class="author-label px-10">
+    by &copy; <a href="/" target="_blank">Natus Ak</a>
+  </div>
 </template>
 
 <style lang="scss" scoped>
