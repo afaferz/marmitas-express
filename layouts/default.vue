@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main class="main bg-white">
     <BaseHeaderHHeader />
     <slot />
     <BaseFooterHFooter />
@@ -10,6 +10,5 @@
 .main {
   width: 100vw;
   height: 100vh;
-  background-color: aquamarine;
 }
 </style>

@@ -73,25 +73,25 @@ const ADDICTION_SUBMENU_ITEMS = [
 const PARTICIPANT_SUBMENU_ITEMS = [
   {
     name: "Viva Empresarial", // 1
-    href: "/adesao/viva-empresarial",
+    href: "/participante/viva-empresarial",
     nuxtLink: true,
     submenu: []
   },
   {
     name: "Viva Futuro", // 2
-    href: "/adesao/viva-futuro",
+    href: "/participante/viva-futuro",
     nuxtLink: true,
     submenu: []
   },
   {
     name: "ANAPARprev", // 3
-    href: "/adesao/anaparprev",
+    href: "/participante/anaparprev",
     nuxtLink: true,
     submenu: []
   },
   {
     name: "IBAprev", // 4
-    href: "/adesao/ibaprev",
+    href: "/participante/ibaprev",
     nuxtLink: true,
     submenu: []
   },
