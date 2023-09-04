@@ -9,5 +9,12 @@ useSeoMeta({
 })
 </script>
 <template>
-  <h1>Page Solucoes</h1>
+  <section class="h-screen page-solutions">
+    <h1>Page Soluções</h1>
+  </section>
 </template>
+<style scoped>
+.page-solutions {
+  background-color: rgb(244, 65, 104);
+}
+</style>

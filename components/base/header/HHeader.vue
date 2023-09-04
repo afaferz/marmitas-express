@@ -6,15 +6,15 @@ export default defineComponent({
   name: "BaseHeaderHHeader",
   setup() {
     const menuStore = useMenuStore();
-    const { items } = storeToRefs(menuStore);
-    return { items };
+    const { navbar } = storeToRefs(menuStore);
+    return { navbar };
   },
 });
 </script>
 
 <template>
   <header class="header h-16 w-full bg-primary">
-    <NavHNav :items="items" />
+    <NavHNavHeader :items="navbar" />
   </header>
 </template>
 <style scoped>

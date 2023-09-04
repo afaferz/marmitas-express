@@ -1,0 +1,110 @@
+@keyframes --anim--zoom-in {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes --anim--fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes --anim-jump {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@mixin anim-jump($duration) {
+  animation-name: --anim-jump;
+  animation-duration: $duration;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+@mixin anim-zoom-in($duration, $delay) {
+  transform: scale(0);
+  transform-origin: center;
+  animation-name: --anim--zoom-in;
+  animation-duration: $duration;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 1.18, 1, 1.21);
+  animation-delay: $delay;
+}
+@mixin anim-fade-in($duration, $delay) {
+  opacity: 0;
+  animation-name: --anim--fade-in;
+  animation-duration: $duration;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: $delay;
+}
+
+@mixin anim-transform($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      transform: $from;
+    }
+    100% {
+      transform: $to;
+    }
+  }
+}
+@mixin anim-transform-and-opacity($name, $fromT, $toT, $fromO, $toO) {
+  @keyframes #{$name} {
+    0% {
+      transform: $fromT;
+      opacity: $fromO;
+    }
+    100% {
+      transform: $toT;
+      opacity: $toO;
+    }
+  }
+}
+
+@mixin anim-transform-to($id, $duration, $delay, $from, $to) {
+  @include anim-transform(--anim-#{$id}, $from, $to);
+  animation-name: --anim-#{$id};
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+@mixin anim-transform-and-opacity-to(
+  $id,
+  $duration,
+  $delay,
+  $fromT,
+  $toT,
+  $fromO,
+  $toO
+) {
+  @include anim-transform-and-opacity(
+    --anim-#{$id},
+    $fromT,
+    $toT,
+    $fromO,
+    $toO
+  );
+  animation-name: --anim-#{$id};
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}

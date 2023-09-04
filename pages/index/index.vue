@@ -9,7 +9,12 @@ useSeoMeta({
 });
 </script>
 <template>
-  <section class="h-screen">
+  <section class="h-screen page-index">
     <h1>Page Index</h1>
   </section>
 </template>
+<style scoped>
+.page-index {
+  background-color: aqua;
+}
+</style>

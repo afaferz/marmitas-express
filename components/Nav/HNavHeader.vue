@@ -3,6 +3,7 @@ import { defineComponent } from "vue";
 import { Menu } from "~/models/menu";
 
 export default defineComponent({
+  name: 'HNavHeader',
   props: {
     items: {
       type: Array as () => Menu.Navbar[],
@@ -22,7 +23,8 @@ export default defineComponent({
     </NuxtLink>
     <DSButtonHambuguerDotHamburguerDot />
     <div
-      class="menu invisible h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-9 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
+      class="menu header invisible opacity-0 h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-9 
+      md:px-28 lg:opacity-100 lg:scale-y-100 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
     >
       <div
         class="menu__item group flex flex-col items-start w-full mx-auto text-secondary lg:after:bg-secondary lg:h-full lg:visible lg:w-auto lg:inline-block lg:text-white"
@@ -74,72 +76,84 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-.menu {
-  transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
+.menu.header {
+  transition: 0.3s cubic-bezier(1, 1.1, 0.8, 1.4);
+  transform-origin: center top;
+  .menu__item {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 3px;
+      width: 0;
+      bottom: 5px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 4px;
+      transition: width 0.2s ease-in-out;
+    }
+    &:hover::after {
+      width: 95%;
+    }
+    &:hover > .menu__submenu {
+      visibility: inherit;
+      transform: translate(0, 0);
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transition-duration: 350ms;
+      opacity: 1;
+      height: auto;
+    }
+    .menu__link {
+      user-select: none;
+    }
+    .menu__link > div span {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 4px;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid #82bc34;
+      border-left: 6px solid transparent;
+    }
+    .menu__submenu {
+      height: 0;
+      visibility: hidden;
+      transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+      transition-duration: 75ms;
+      opacity: 0;
+    }
+    .menu__link ~ .menu__submenu:focus-within,
+    .menu__link:focus ~ .menu__submenu {
+      visibility: inherit;
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transition-duration: 350ms;
+      opacity: 1;
+      height: auto;
+    }
+  }
+  .menu__link--active,
+  .menu__link--exact-active {
+    position: relative;
+    background-color: #82bc34;
+    color: #f8fafc !important;
+    padding: 4px;
+    border-radius: 4px;
+  }
 }
-.menu__item {
-  position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    height: 3px;
-    width: 0;
-    bottom: 5px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 4px;
-    transition: width 0.2s ease-in-out;
-  }
-  &:hover::after {
-    width: 95%;
-  }
-  &:hover > .menu__submenu {
-    visibility: inherit;
-    transform: translate(0, 0);
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: 350ms;
-    opacity: 1;
-    height: auto;
-  }
-  .menu__link {
-    user-select: none;
-  }
-  .menu__link > div span {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 4px;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid #82bc34;
-    border-left: 6px solid transparent;
-  }
-  .menu__submenu {
-    height: 0;
-    visibility: hidden;
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-    transition-duration: 75ms;
-    opacity: 0;
-  }
-  .menu__link ~ .menu__submenu:focus-within,
-  .menu__link:focus ~ .menu__submenu {
-    visibility: inherit;
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: 350ms;
-    opacity: 1;
-    height: auto;
-  }
-}
-.menu__link--active,
-.menu__link--exact-active {
-  position: relative;
-  background-color: #82bc34;
-  color: #f8fafc !important;
-  padding: 4px;
-  border-radius: 4px;
-}
-#button__toggle:checked ~ .menu {
-  transform: translateY(0);
-  opacity: 1;
+#button__toggle:checked ~ .menu.header {
   visibility: visible;
   height: 100vh;
+  animation: --anim-fade-in 0.3s ease-out 1 normal both;
+}
+@keyframes --anim-fade-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    height: 100vh;
+  }
 }
 </style>

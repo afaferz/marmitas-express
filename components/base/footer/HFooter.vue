@@ -6,18 +6,21 @@ export default defineComponent({
   name: "BaseFooterFooter",
   setup() {
     const menuStore = useMenuStore();
-    const { items } = storeToRefs(menuStore);
-    return { items };
+    const { navbar, lgpd } = storeToRefs(menuStore);
+    return { navbar, lgpd };
   },
 });
 </script>
 
 <template>
   <footer class="footer h-16 w-full bg-primary">
-    <!-- <NavHNav :items="items" /> -->
+    <NavHNavFooter :items="navbar" :items-lgpd="lgpd" />
   </footer>
 </template>
 <style scoped>
+.footer {
+  height: auto;
+}
 .footer::after {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.07), transparent);
   content: "";

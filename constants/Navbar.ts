@@ -1,6 +1,6 @@
 import { Menu } from "~/models/menu";
 
-const ENTERPRISE_SUBMENU_ITEMS = [
+const _ENTERPRISE_SUBMENU_ITEMS = [
   {
     name: "Quem Somos", // 1
     href: "/viva/quem-somos",
@@ -44,7 +44,7 @@ const ENTERPRISE_SUBMENU_ITEMS = [
     submenu: [],
   },
 ];
-const ADDICTION_SUBMENU_ITEMS = [
+const _ADDICTION_SUBMENU_ITEMS = [
   {
     name: "Viva Empresarial", // 1
     href: "/adesao/viva-empresarial",
@@ -70,7 +70,7 @@ const ADDICTION_SUBMENU_ITEMS = [
     submenu: [],
   },
 ];
-const PARTICIPANT_SUBMENU_ITEMS = [
+const _PARTICIPANT_SUBMENU_ITEMS = [
   {
     name: "Viva Empresarial", // 1
     href: "/participante/viva-empresarial",
@@ -96,18 +96,18 @@ const PARTICIPANT_SUBMENU_ITEMS = [
     submenu: [],
   },
 ];
-const MAIN_MENU_ITEMS = [
+export const MAIN_MENU_ITEMS = [
   {
     name: "Viva Prev", // 1
     href: "/viva",
     nuxtLink: false,
-    submenu: ENTERPRISE_SUBMENU_ITEMS,
+    submenu: _ENTERPRISE_SUBMENU_ITEMS,
   },
   {
     name: "Adesão", // 2
     href: "/adesao",
     nuxtLink: false,
-    submenu: ADDICTION_SUBMENU_ITEMS,
+    submenu: _ADDICTION_SUBMENU_ITEMS,
   },
   {
     name: "Soluções", // 3
@@ -125,8 +125,33 @@ const MAIN_MENU_ITEMS = [
     name: "Área do Participante", // 5
     href: "/participante",
     nuxtLink: false,
-    submenu: PARTICIPANT_SUBMENU_ITEMS,
+    submenu: _PARTICIPANT_SUBMENU_ITEMS,
   },
 ] satisfies Menu.Navbar[];
 
-export { MAIN_MENU_ITEMS };
+export const MAIN_MENU_LGPD_ITEMS = [
+  {
+    name: "Política de Privacidade", // 1
+    href: "/lgpd/politica-de-privacidade",
+    nuxtLink: true,
+    submenu: [],
+  },
+  {
+    name: "Política de Cookies", // 2
+    href: "/lgpd/politica-de-cookies",
+    nuxtLink: true,
+    submenu: [],
+  },
+  {
+    name: "Segurança", // 3
+    href: "/lgpd/seguranca",
+    nuxtLink: true,
+    submenu: [],
+  },
+  {
+    name: "Configuração de Cookies", // 4
+    href: undefined!,
+    nuxtLink: true,
+    submenu: [],
+  },
+] satisfies Menu.Navbar[];

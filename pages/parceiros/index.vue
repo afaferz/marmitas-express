@@ -9,5 +9,12 @@ useSeoMeta({
 })
 </script>
 <template>
-  <h1>Page Parceiros</h1>
+  <section class="h-screen page-partner">
+    <h1>Page Parceiros</h1>
+  </section>
 </template>
+<style scoped>
+.page-partner {
+  background-color: rgb(195, 105, 211);
+}
+</style>

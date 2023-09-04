@@ -9,5 +9,12 @@ useSeoMeta({
 })
 </script>
 <template>
-  <h1>Page Viva</h1>
+  <section class="h-screen page-viva">
+    <h1>Page Viva</h1>
+  </section>
 </template>
+<style scoped>
+.page-viva {
+  background-color: rgb(250, 248, 86);
+}
+</style>
