@@ -9,12 +9,19 @@ useSeoMeta({
 });
 </script>
 <template>
-  <section class="h-screen page-index">
-    <h1>Page Index</h1>
+  <section class="min-h-screen h-full w-screen page-index bg-white">
+    <div class="w-full">
+      <PagesIndexSectionsHSection1 />
+    </div>
   </section>
 </template>
 <style scoped>
 .page-index {
-  background-color: aqua;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #82bc34 10px
+    ),
+    repeating-linear-gradient(#1f1f1f55, #1f1f1f);
 }
 </style>

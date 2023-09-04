@@ -1,0 +1,68 @@
+import { v4 as uuidv4 } from "uuid";
+import { Plans } from "~/models/plans";
+export const VIVA_PLANS = [
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+  {
+    id: '',
+    title: "Viva Empresarial",
+    callTitle: "Conheça Agora",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`,
+    linkImage: "/plans/plan-viva-empresarial.png",
+    linkUrl: "#",
+  },
+] satisfies Plans.Viva[];
