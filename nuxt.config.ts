@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   devtools: { enabled: true },
-  css: [],
+  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
+  plugins: [{ src: "~/plugins/fontawesome.ts" }],
   components: [
     {
       path: "~/components",
