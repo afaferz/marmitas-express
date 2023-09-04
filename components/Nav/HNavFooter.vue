@@ -27,7 +27,7 @@ export default defineComponent({
       <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" class="px-10" />
     </div>
     <div
-      class="menu footer h-auto max-h-max flex flex-col items-center gap-4 w-screen bg-primary h-screen px-10 z-9 lg:items-start lg:flex-row lg:w-full lg:pt-0 lg:col-span-2"
+      class="menu footer h-auto max-h-max flex flex-col items-center gap-4 w-screen bg-primary px-10 z-9 lg:items-start lg:flex-row lg:w-full lg:pt-0 lg:col-span-2"
     >
       <div
         class="menu__item group flex flex-col items-start w-full mx-auto text-white lg:after:bg-white lg:h-full lg:w-full lg:visible lg:text-white"
@@ -35,7 +35,7 @@ export default defineComponent({
         :key="item.name"
       >
         <button
-          class="menu__link cursor-pointer w-full py-2 flex flex-row h-full items-center lg:max-w-fit"
+          class="menu__link cursor-pointer w-full py-2 flex flex-row h-full items-center lg:h-auto"
           :tabindex="!item.nuxtLink ? '0' : '1'"
         >
           <NuxtLink
@@ -76,7 +76,7 @@ export default defineComponent({
       </div>
     </div>
     <div
-      class="menu footer h-auto max-h-max flex flex-col items-center gap-2 w-screen bg-primary h-screen px-10 pt-6 z-9 lg:w-full lg:pt-0 lg:h-full lg:w-full lg:row-start-3"
+      class="menu footer h-auto max-h-max flex flex-col items-center gap-2 w-screen bg-primary px-10 pt-6 z-9 lg:w-full lg:pt-0 lg:h-full lg:w-full lg:row-start-3"
     >
       <span class="w-full text-secondary font-bold">Políticas</span>
       <div
@@ -126,8 +126,8 @@ export default defineComponent({
         <span>0800 720 5600 - Agendamento</span>
       </div>
       <div class="flex flex-col gap-4 w-full items-start py-2">
-        <DSButtonMainHButton :icon="['fa', 'user']" class="p-2 bg-secondary rounded">
-          <NuxtLink to="/contato">
+        <DSButtonMainHButton :icon="['fas', 'user']" class="p-2 bg-secondary rounded">
+          <NuxtLink to="/contato" class="inline-block h-full">
             Outros > Fale Conosco
           </NuxtLink>
         </DSButtonMainHButton>

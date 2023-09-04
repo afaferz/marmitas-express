@@ -13,7 +13,6 @@ export default defineComponent({
   setup() {
       const store = usePageStore();
       const { GET_LOADING } = storeToRefs(store);
-      console.log(GET_LOADING)
       return { loading: GET_LOADING };
   },
 });

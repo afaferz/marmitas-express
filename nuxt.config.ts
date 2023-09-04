@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
-  plugins: [{ src: "~/plugins/fontawesome.ts" }],
+  // plugins: [{ src: "~/plugins/fontawesome.ts" }],
   components: [
     {
       path: "~/components",
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
     viewer: true,
   },
   image: {
-    format: ["webp"],
+    format: ["webp", "png"],
     dir: "assets/img",
     screens: {
       xs: 320,
