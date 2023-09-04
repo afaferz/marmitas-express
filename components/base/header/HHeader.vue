@@ -3,7 +3,7 @@ import { storeToRefs } from "pinia";
 import { defineComponent } from "vue";
 import { useMenuStore } from "~/stores/menu";
 export default defineComponent({
-  name: "BaseFooterHHeader",
+  name: "BaseHeaderHHeader",
   setup() {
     const menuStore = useMenuStore();
     const { items } = storeToRefs(menuStore);

@@ -1,11 +1,28 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+import { Menu } from "~/models/menu";
+
+export default defineComponent({
+  props: {
+    items: {
+      type: Array as () => Menu.Navbar[],
+      default: () => [],
+      required: true,
+    },
+  },
+  setup() {},
+});
+</script>
 <template>
   <nav
     class="nav h-full w-full flex flex-row items-center justify-around p-2 mx-auto z-9 lg:py-0"
   >
-    <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" />
+    <NuxtLink to="/">
+      <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" />
+    </NuxtLink>
     <DSButtonHambuguerDotHamburguerDot />
     <div
-      class="menu invisible h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-10 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
+      class="menu invisible h-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-9 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
     >
       <div
         class="menu__item group flex flex-col items-start w-full mx-auto text-secondary lg:after:bg-secondary lg:h-full lg:visible lg:w-auto lg:inline-block lg:text-white"
@@ -55,21 +72,7 @@
     </div>
   </nav>
 </template>
-<script lang="ts">
-import { defineComponent } from "vue";
-import { MenuItems } from "~/stores/menu/types";
 
-export default defineComponent({
-  props: {
-    items: {
-      type: Array as () => MenuItems[],
-      default: () => [],
-      required: true,
-    },
-  },
-  setup() {},
-});
-</script>
 <style lang="scss" scoped>
 .menu {
   transition: 350ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
