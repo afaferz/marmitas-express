@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "marmitas-express",
   "private": true,
   "scripts": {
     "build": "nuxt build",
