@@ -13,11 +13,14 @@ export default defineComponent({
 </script>
 
 <template>
-  <header class="header h-16 w-full fixed bg-primary z-10">
+  <header class="header h-20 py-4 w-full fixed bg-primary z-10">
     <NavHNavHeader :items="navbar" />
   </header>
 </template>
 <style scoped>
+.header {
+    border-radius: 0 0 1.25rem 1.25rem;
+}
 .header::after {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.07), transparent);
   content: "";
