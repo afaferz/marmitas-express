@@ -98,25 +98,25 @@ const _PARTICIPANT_SUBMENU_ITEMS = [
 ];
 export const MAIN_MENU_ITEMS = [
     {
-        name: "NOSSOS PRODUTOS", // 1
+        name: "Nossos Produtos", // 1
         href: "/produtos",
         nuxtLink: true,
         submenu: [],
     },
     {
-        name: "DELIVERY", // 3
+        name: "Delivery", // 3
         href: "/delivery",
         nuxtLink: true,
         submenu: [],
     },
     {
-        name: "FALE CONOSCO", // 4
+        name: "Fale Conosco", // 4
         href: "/contato",
         nuxtLink: true,
         submenu: [],
     },
     {
-        name: "ONDE NOS ENCONTRAR", // 5
+        name: "Onde Nos Encontrar", // 5
         href: "/onde-nos-encontrar",
         nuxtLink: true,
         submenu: [],
@@ -149,3 +149,28 @@ export const MAIN_MENU_LGPD_ITEMS = [
         submenu: [],
     },
 ] satisfies Menu.Navbar[];
+
+export const MAIN_MENU_SOCIAL_ITEMS = [
+    {
+        name: 'WhatsApp',
+        href: '',
+        nuxtLink: true,
+        icon: ['fab', 'whatsapp'],
+        submenu: []
+    },
+    {
+        name: 'Instagram',
+        href: '',
+        nuxtLink: true,
+        icon: ['fab', 'instagram'],
+        submenu: []
+    },
+    {
+        name: 'Facebook',
+        href: '',
+        nuxtLink: true,
+        icon: ['fab', 'facebook'],
+        submenu: []
+    },
+
+] satisfies Menu.Navbar[]

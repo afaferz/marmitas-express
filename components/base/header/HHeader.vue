@@ -21,7 +21,7 @@ export default defineComponent({
 .header {
     border-radius: 0 0 1.25rem 1.25rem;
 }
-.header::after {
+/* .header::after {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.07), transparent);
   content: "";
   display: block;
@@ -31,5 +31,5 @@ export default defineComponent({
   position: absolute;
   top: 100%;
   width: 100%;
-}
+} */
 </style>
