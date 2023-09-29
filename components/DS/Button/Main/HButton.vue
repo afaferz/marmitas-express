@@ -1,5 +1,5 @@
 <template>
-    <a href="http://" target="_blank" v-if="!!href" v-bind="htmlAttr">
+    <a :href="href" target="_blank" v-if="!!href" v-bind="htmlAttr">
         <div class="flex gap-2 items-center justify-center px-2 mx-auto w-full text-center">
             <slot />
             <fa-icon

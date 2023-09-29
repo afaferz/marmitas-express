@@ -71,7 +71,7 @@ export default defineComponent({
 
                 <div
                     class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
-                >
+                >75
                     <button
                         type="button"
                         class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
@@ -100,24 +100,46 @@ export default defineComponent({
         v-show="opened"
     >
         <div
-            class="product-modal shadow-xl min-w-[300px] w-2/5 p-12 border-solid border-[#fff] border-2 rounded-xl bg-white relative"
+            class="product-modal relative shadow-xl w-5/6 lg:w-2/4 h-auto p-8 border-solid border-[#fff] border-2 rounded-xl bg-white z-0 flex flex-col justify-evenly"
         >
-            {{ opened }}
-            <div class="product-modal__close-area">
-                <button
-                    @click.stop="$emit('update:opened', false)"
-                    class="absolute top-[-15px] right-[-15px] rounded-full w-6 h-6 grid place-content-center bg-primary p-2"
-                >
-                    <fa-icon
-                        :icon="['fas', 'xmark']"
-                        size="1x"
-                        class="text-[#fff]"
-                    ></fa-icon>
-                </button>
+            <button
+                @click.stop="$emit('update:opened', false)"
+                class="absolute top-[-15px] right-[-15px] rounded-full w-6 h-6 grid place-content-center bg-primary p-2 z-20"
+            >
+                <fa-icon
+                    :icon="['fas', 'xmark']"
+                    size="1x"
+                    class="text-[#fff]"
+                ></fa-icon>
+            </button>
+            <div class="product-modal__context">
+                <div class="h-[185px] w-full">
+                    A
+                    <img src="" alt="" />
+                </div>
+                <div class="w-full h-auto flex flex-col gap-3">
+                    <span class="--subtitle text-3xl text-primary">{{
+                        item.title
+                    }}</span>
+                    <br />
+                    <span
+                        class="rounded-full bg-secondary py px-3 font-bold text-[#000] max-w-[200px] w-fit text-center"
+                    >
+                        {{ item.category['STEAK'] }}
+                    </span>
+                    <br />
+                    <p class="font-normal my-4">
+                        {{ item.description }}
+                        Lorem ipsum dolor Lorem ipsum dolorLorem ipsum
+                        dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum
+                        dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum
+                        dolorLorem ipsum dolorLorem ipsum dolorLorem ipsum
+                        dolorLorem ipsum dolorLorem ipsum dolor
+                    </p>
+                </div>
             </div>
-            <div class="product-modal__content"></div>
             <div
-                class="product-modal__cta flex flex-col gap-4 justify-start items-center"
+                class="product-modal__cta flex flex-col gap-4 justify-start items-center my-12"
             >
                 <DSButtonMainHButton
                     :icon="['fas', 'arrow-up-right-from-square']"
@@ -127,7 +149,7 @@ export default defineComponent({
                     href="http://google.com.br"
                     target="_blank"
                 >
-                    <span class="text-[#fff] font-bold">
+                    <span class="text-[#fff] font-bold text-sm">
                         Pedir no WhatsApp
                     </span>
                 </DSButtonMainHButton>
@@ -139,10 +161,31 @@ export default defineComponent({
                     href="http://google.com.br"
                     target="_blank"
                 >
-                    <span class="text-[#fff] font-bold">
+                    <span class="text-[#fff] font-bold text-sm">
                         Pedir no iFood
                     </span>
                 </DSButtonMainHButton>
+            </div>
+            <div class="product-modal__more">
+                <!-- <div class="flex flex-col gap-4">
+                    <div
+                        class="flex flex-col lg:flex-row items-start lg:justify-between overflow-y-scroll h-20"
+                    >
+                        <aside class="flex flex-col gap-2">
+                            <span class="--subtitle">Ingredientes:</span>
+                            <ul class="list-disc">
+                                <li class="font-normal text-[#111111]"></li>
+                            </ul>
+                        </aside>
+                        <hr />
+                        <aside class="flex flex-col gap-2">
+                            <span class="--subtitle">Quantidade:</span>
+                            <ul class="list-disc">
+                                <li class="font-normal text-[#111111]"></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
