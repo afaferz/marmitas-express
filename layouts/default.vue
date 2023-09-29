@@ -10,7 +10,7 @@ nuxtApp.hook('page:finish', () => pageStore.SET_LOADING(false));
 <template>
     <BaseHeaderHHeader />
     <CustomPageLoadingHLoading />
-    <main class="main h-screen pt-20 bg-white">
+    <main class="main pt-20 bg-white">
         <slot></slot>
     </main>
     <BaseFooterHFooter />

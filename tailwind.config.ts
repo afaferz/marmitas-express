@@ -2,6 +2,15 @@ import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 export default <Partial<Config>>{
+    // content: [
+    //     "./components/**/*.{js,vue,ts}",
+    //     "./layouts/**/*.vue",
+    //     "./pages/**/*.vue",
+    //     "./plugins/**/*.{js,ts}",
+    //     "./nuxt.config.{js,ts}",
+    //     "./app.vue",
+    //     "./node_modules/tw-elements/dist/js/**/*.js"
+    // ],
     theme: {
         extend: {
             fontFamily: {
@@ -15,4 +24,5 @@ export default <Partial<Config>>{
             },
         },
     },
+    plugins: [require("tw-elements/dist/plugin.cjs")]
 };

@@ -28,7 +28,7 @@ export default defineComponent({
         </NuxtLink>
         <DSButtonHambuguerDotHamburguerDot v-model:checked="checked" />
         <div
-            class="menu header invisible opacity-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-10 md:px-28 lg:opacity-100 lg:scale-y-100 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/4 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
+            class="menu header invisible opacity-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-10 md:px-28 lg:opacity-100 lg:scale-y-100 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/6 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
         >
             <div
                 class="menu__item group flex flex-col items-start w-full mx-auto font-bold text-[#fff] lg:after:bg-secondary lg:h-full lg:visible lg:w-auto lg:inline-block lg:text-[#fff]"

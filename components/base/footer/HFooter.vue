@@ -15,7 +15,7 @@ export default defineComponent({
 <template>
     <footer class="footer h-16 w-full bg-primary flex flex-col gap-4 mb-4">
         <div class="footer-top z-3 relative bg-[#fff] h-[350px] w-full"></div>
-        <div class="footer-middle mt-4 h-60 flex items-end pt-52 z-3 relative">
+        <div class="footer-middle mt-4 h-60 flex items-end pt-80 z-3 relative">
             <div class="w-full px">
                 <div
                     class="mx-auto py-4 flex flex-col gap-3 justify-center items-center lg:flex-row lg:justify-around"

@@ -11,10 +11,6 @@ export default defineComponent({
             required: true,
         },
     },
-    setup() {
-        const check = ref(false);
-        return { check };
-    },
 });
 </script>
 <template>

@@ -98,8 +98,8 @@ const _PARTICIPANT_SUBMENU_ITEMS = [
 ];
 export const MAIN_MENU_ITEMS = [
     {
-        name: "Nossos Produtos", // 1
-        href: "/produtos",
+        name: "Cardápio", // 1
+        href: "/cardapio",
         nuxtLink: true,
         submenu: [],
     },

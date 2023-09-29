@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Products from '~/components/Pages/Produtos/Card/Products.vue';
 useSeoMeta({
     title: 'Marmitas Express',
     ogTitle: 'Marmitas Express',
@@ -8,7 +9,11 @@ useSeoMeta({
     twitterCard: 'summary_large_image',
 });
 </script>
-<template></template>
+<template>
+    <div class="px-4 relative z-[1] lg:px-52 h-full">
+        <Products />
+    </div>
+</template>
 <style scoped>
 .page-index {
     /* background-color: #82bc34; */
