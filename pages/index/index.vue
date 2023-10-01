@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Products from '~/components/Pages/Produtos/Card/Products.vue';
+import ProductCarousel from '~/components/Pages/Produtos/ProductCarousel.vue';
 useSeoMeta({
     title: 'Marmitas Express',
     ogTitle: 'Marmitas Express',
@@ -10,8 +11,13 @@ useSeoMeta({
 });
 </script>
 <template>
-    <div class="px-4 relative z-[1] lg:px-52 h-full">
-        <Products />
+    <div>
+        <div class="w-full">
+            <ProductCarousel />
+        </div>
+        <div class="px-4 relative z-[1] lg:px-52 h-full">
+            <Products />
+        </div>
     </div>
 </template>
 <style scoped>

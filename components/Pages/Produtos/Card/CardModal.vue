@@ -50,7 +50,7 @@ export default defineComponent({
                         <span
                             class="rounded-full bg-secondary py px-3 font-bold text-[#000] max-w-[200px] w-fit text-center"
                         >
-                            {{ item.category['STEAK'] }}
+                            {{ item.category }}
                         </span>
                         <br />
                         <p class="font-normal my-4">
@@ -87,7 +87,7 @@ export default defineComponent({
                         target="_blank"
                     >
                         <span class="text-[#fff] font-bold text-sm">
-                            Pedir no iFood
+                            Nosso delivery
                         </span>
                     </DSButtonMainHButton>
                 </div>

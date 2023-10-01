@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import MenuProducts from '~/components/Pages/Cardapio/MenuProducts.vue';
 useSeoMeta({
   title: 'My Amazing Site',
   ogTitle: 'My Amazing Site',
@@ -9,5 +10,7 @@ useSeoMeta({
 })
 </script>
 <template>
-  <h1>Page Adesao</h1>
+  <div>
+    <MenuProducts />
+  </div>
 </template>

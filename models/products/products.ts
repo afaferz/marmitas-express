@@ -1,18 +1,18 @@
 export namespace Product {
     export enum Categories {
-        STEAK = 'steak',
-        CHICKEN = 'chicken',
-        BRAZILIAN = 'brazilian',
-        DRINK = 'drink',
-        SIDE_DISH = 'side_dish',
-        DESERT = 'desert'
+        STEAK = 'carne',
+        CHICKEN = 'frango',
+        BRAZILIAN = 'típica',
+        DRINK = 'bebida',
+        SIDE_DISH = 'acompanhamento',
+        DESERT = 'sobremesa'
     }
     export interface Root {
         id: string;
         title: string;
         description: string;
         linkImage: string;
-        category: typeof Categories;
+        category: Categories;
         ctaLink: string,
         linkUrl?: string;
         show: boolean;

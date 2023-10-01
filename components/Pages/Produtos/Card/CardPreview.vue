@@ -23,21 +23,21 @@ export default defineComponent({
     <div>
         <a @click.prevent="item.show = true" class="cursor-pointer">
             <div
-                class="shadow-xl rounded-xl min-h-full h-auto w-full p-4 bg-white"
+                class="shadow-xl rounded-xl min-h-full h-auto w-full p-4 bg-primary"
             >
                 <div class="rounded-xl h-36 lg:h-48">
                     <div
-                        class="rounded-xl border-solid border-primary border-2 h-36 w-full lg:h-48"
+                        class="rounded-xl border-solid border-white border-2 h-36 w-full lg:h-48"
                     >
                         <img
-                            src=""
+                            src="https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg"
                             alt=""
                             class="block rounded-xl h-full w-full"
                         />
                     </div>
                 </div>
                 <div class="rounded-xl h-22 pt-4">
-                    <h3 class="text-primary font-nromal text-lg --subtitle">
+                    <h3 class="text-white font-nromal text-lg --subtitle">
                         {{ item.title }}
                     </h3>
                 </div>

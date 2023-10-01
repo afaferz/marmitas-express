@@ -23,12 +23,12 @@ export default defineComponent({
     <nav
         class="nav h-full w-full flex flex-row items-center justify-around p-2 mx-auto z-10 lg:py-0"
     >
-        <NuxtLink to="/">
-            <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" />
+        <NuxtLink to="/" @click="checked = false">
+            <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:175px" />
         </NuxtLink>
         <DSButtonHambuguerDotHamburguerDot v-model:checked="checked" />
         <div
-            class="menu header invisible opacity-0 max-h-max flex flex-col items-center absolute gap-4 top-16 w-screen bg-primary h-screen px-10 py-6 z-10 md:px-28 lg:opacity-100 lg:scale-y-100 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/6 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
+            class="menu header invisible opacity-0 max-h-max flex flex-col items-center absolute gap-4 top-20 w-screen bg-primary h-screen px-10 py-6 z-10 md:px-28 lg:opacity-100 lg:scale-y-100 lg:grid lg:grid-flow-col lg:auto-cols-auto lg:static lg:h-full lg:w-2/6 lg:p-0 lg:gap-0 lg:grid-rows-1 lg:px-0"
         >
             <div
                 class="menu__item group flex flex-col items-start w-full mx-auto font-bold text-[#fff] lg:after:bg-secondary lg:h-full lg:visible lg:w-auto lg:inline-block lg:text-[#fff]"
@@ -56,7 +56,7 @@ export default defineComponent({
                     </div>
                 </button>
                 <ul
-                    class="menu__submenu invisible px-2 translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 z-9 lg:group-hover:block lg:visible lg:absolute lg:top-14 lg:block lg:bg-[#fff] lg:h-0 lg:translate-x-0 lg:scale-x-0 lg:auto"
+                    class="menu__submenu invisible px-2 translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 z-9 lg:group-hover:block lg:visible lg:absolute lg:top-[80px] lg:block lg:bg-[#fff] lg:h-0 lg:translate-x-0 lg:scale-x-0 lg:auto"
                     v-if="item.submenu.length > 0"
                 >
                     <li

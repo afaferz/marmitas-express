@@ -19,7 +19,7 @@ export default defineComponent({
 </template>
 <style scoped>
 .header {
-    border-radius: 0 0 1.25rem 1.25rem;
+    /* border-radius: 0 0 1.25rem 1.25rem; */
 }
 /* .header::after {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.07), transparent);

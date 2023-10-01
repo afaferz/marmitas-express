@@ -30,6 +30,7 @@
     "@types/uuid": "^9.0.3",
     "pinia": "^2.1.6",
     "tw-elements": "^1.0.0",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vueperslides": "^3.5.1"
   }
 }
