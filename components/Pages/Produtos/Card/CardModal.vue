@@ -25,7 +25,7 @@ export default defineComponent({
             v-show="opened"
         >
             <div
-                class="product-modal relative shadow-xl w-5/6 lg:w-2/4 h-auto p-8 border-solid border-[#fff] border-2 rounded-xl bg-white z-0 flex flex-col justify-evenly"
+                class="product-modal relative shadow-xl w-5/6 lg:w-2/5 h-auto p-8 border-solid border-[#fff] border-2 rounded-xl bg-white z-0 flex flex-col justify-evenly"
             >
                 <button
                     @click.stop="$emit('update:opened', false)"
@@ -35,12 +35,11 @@ export default defineComponent({
                         :icon="['fas', 'xmark']"
                         size="1x"
                         class="text-[#fff]"
-                    ></fa-icon>
+                    />
                 </button>
                 <div class="product-modal__context">
-                    <div class="h-[185px] w-full">
-                        A
-                        <img src="" alt="" />
+                    <div class="h-[185px] w-full my-4">
+                        <img :src="item.linkImage" alt="" class="h-full w-full" />
                     </div>
                     <div class="w-full h-auto flex flex-col gap-3">
                         <span class="--subtitle text-3xl text-primary">{{
@@ -64,14 +63,14 @@ export default defineComponent({
                     </div>
                 </div>
                 <div
-                    class="product-modal__cta flex flex-col gap-4 justify-start items-center my-12 lg:flex-row lg:items-start"
+                    class="product-modal__cta flex flex-col gap-4 justify-start items-center my-6 lg:flex-row lg:items-start"
                 >
                     <DSButtonMainHButton
                         :icon="['fas', 'arrow-up-right-from-square']"
                         :icon-class="['text-[#fff] font-bold']"
                         class="p-2 w-full bg-[#25D366] rounded-lg"
                         tabindex="0"
-                        href="http://google.com.br"
+                        :href="item.ctaLink"
                         target="_blank"
                     >
                         <span class="text-[#fff] font-bold text-sm">
@@ -83,7 +82,7 @@ export default defineComponent({
                         :icon-class="['text-[#fff] font-bold']"
                         class="p-2 w-full bg-[#e32929] rounded-lg"
                         tabindex="0"
-                        href="http://google.com.br"
+                        :href="item.linkUrl"
                         target="_blank"
                     >
                         <span class="text-[#fff] font-bold text-sm">

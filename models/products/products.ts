@@ -15,6 +15,7 @@ export namespace Product {
         category: Categories;
         ctaLink: string,
         linkUrl?: string;
+        price?: number;
         show: boolean;
     }
 }

@@ -5,16 +5,26 @@ import { useMenuStore } from '~/stores/menu';
 export default defineComponent({
     name: 'BaseFooterFooter',
     setup() {
+        const route = useRoute();
         const menuStore = useMenuStore();
-        const { navbar, lgpd, social } = storeToRefs(menuStore);
-        return { navbar, lgpd, social };
+        const { navbar, social } = storeToRefs(menuStore);
+        const isMenuRoute = computed(() => route.name === 'cardapio');
+        const isDeliveryRoute = computed(() => route.name === 'delivery');
+        const isLocationRoute = computed(() => route.name === 'onde-nos-encontrar');
+        return { navbar, social, isMenuRoute, isDeliveryRoute,isLocationRoute };
     },
 });
 </script>
 
 <template>
     <footer class="footer h-16 w-full bg-primary flex flex-col gap-4">
-        <div class="footer-top z-3 relative bg-[#fff] h-[350px] w-full"></div>
+        <div
+            :class="{
+                'bg-primary': isMenuRoute,
+                'bg-secondary': isDeliveryRoute || isLocationRoute,
+            }"
+            class="footer-top z-3 relative bg-[#fff] h-[350px] w-full"
+        ></div>
         <div class="footer-middle mt-4 h-60 flex items-end pt-80 z-3 relative">
             <div class="w-full px">
                 <div
@@ -76,6 +86,7 @@ export default defineComponent({
                         <b> Copyright &copy; 2023 - Marmitas Express </b>
                         <br />
                         Todos os direitos reservados.
+                        <br>CNPJ: 46.269.160/0001-31
                     </p>
                 </div>
             </div>
@@ -97,7 +108,7 @@ export default defineComponent({
     width: 100%;
 }
 .footer-top {
-    background-image: url(/images/bg-pattern-flame.png);
+    background-image: url(/img/bg-pattern-flame.png);
     background-repeat: no-repeat;
     background-size: 100% 350px;
     background-position: bottom center;
@@ -105,7 +116,7 @@ export default defineComponent({
 }
 .footer-top::after {
     content: '';
-    background-image: url(/images/bg-pattern-flame.png);
+    background-image: url(/img/bg-pattern-flame.png);
     background-repeat: no-repeat;
     background-size: 100% 350px;
     background-position: bottom center;

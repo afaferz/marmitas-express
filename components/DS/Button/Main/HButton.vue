@@ -7,16 +7,18 @@
                 class="vertical-middle"
                 :icon="[...icon]"
                 :class="[...iconClass]"
+                size="xs"
             />
         </div>
     </a>
-    <button type="button" v-bind="htmlAttr" v-else>
+    <button type="button" class="flex flex-row items-center justify-center" v-bind="htmlAttr" v-else>
         <slot />
         <fa-icon
             v-if="icon"
             class="ml-2 vertical-middle"
             :icon="[...icon]"
             :class="[...iconClass]"
+            size="xs"
         />
     </button>
 </template>

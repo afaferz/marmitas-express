@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 <template>
   <nav
-    class="nav h-full w-full flex flex-row items-center justify-around p-2 py-10 mx-auto grid grid-rows-auto gap-6 lg:items-start lg:grid-cols-2 lg:grid-rows-auto"
+    class="nav h-full w-full flex flex-row items-center justify-around p-2 py-10 mx-auto grid-rows-auto gap-6 lg:items-start lg:grid-cols-2 lg:grid-rows-auto"
   >
     <div class="lg:col-span-1">
       <NuxtImg src="/logo.png" sizes="sm:75vw md:50vw lg:250px" class="px-10" />
@@ -68,7 +68,7 @@ export default defineComponent({
           </div>
         </button>
         <ul
-          class="menu__submenu h-0 invisible translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 z-9 lg:visible lg:flex flex-col lg:opacity-100 lg:h-full lg:block lg:bg-primary lg:h-0 lg:translate-x-0"
+          class="menu__submenu h-0 invisible translate-x-[-100vw] group-focus:translate-x-0 group-focus-within:translate-x-0 z-9 lg:visible flex-col lg:opacity-100 lg:h-full lg:block lg:bg-primary lg:translate-x-0"
           v-if="item.submenu.length > 0"
         >
           <li
@@ -90,7 +90,7 @@ export default defineComponent({
       </div>
     </div>
     <div
-      class="menu footer h-auto max-h-max flex flex-col items-center gap-2 w-screen bg-primary px-10 pt-6 z-9 lg:w-full lg:pt-0 lg:h-full lg:w-full lg:row-start-3"
+      class="menu footer h-auto max-h-max flex flex-col items-center gap-2 w-screen bg-primary px-10 pt-6 z-9 lg:pt-0 lg:h-full lg:w-full lg:row-start-3"
     >
       <span class="w-full text-secondary font-bold">Políticas</span>
       <div

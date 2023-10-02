@@ -10,9 +10,10 @@ export const STEAK_PRODUCTS = [
         description: 'Prato feito com amor e carinho',
         linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
         category: Product.Categories.STEAK,
-        ctaLink: '',
-        linkUrl: '',
+        ctaLink: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        linkUrl: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
         show: false,
+        price: 10.00
     },
     {
 
@@ -24,6 +25,7 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
     {
 
@@ -35,6 +37,7 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
     {
 
@@ -46,6 +49,7 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
     {
 
@@ -57,6 +61,7 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
     {
 
@@ -68,6 +73,7 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
     {
 
@@ -79,6 +85,7 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
     {
 
@@ -90,19 +97,107 @@ export const STEAK_PRODUCTS = [
         ctaLink: '',
         linkUrl: '',
         show: false,
+        price: 12.00
     },
 ] satisfies Products.SingleProduct[]
-export const CHICKEN_PRODUCTS = [{
+export const CHICKEN_PRODUCTS = [
+    {
 
-    id: uuid(),
-    title: 'Prato 1',
-    description: 'Prato feito com amor e carinho',
-    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
-    category: Product.Categories.CHICKEN,
-    ctaLink: '',
-    linkUrl: '',
-    show: false,
-}] satisfies Products.SingleProduct[]
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+    {
+
+        id: uuid(),
+        title: 'Prato 1',
+        description: 'Prato feito com amor e carinho',
+        linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+        category: Product.Categories.CHICKEN,
+        ctaLink: '',
+        linkUrl: '',
+        show: false,
+        price: 12.00
+    },
+] satisfies Products.SingleProduct[]
 export const BRAZILIAN_PRODUCTS = [{
 
     id: uuid(),
@@ -113,6 +208,7 @@ export const BRAZILIAN_PRODUCTS = [{
     ctaLink: '',
     linkUrl: '',
     show: false,
+    price: 12.00
 }] satisfies Products.SingleProduct[]
 export const DRINKS_PRODUCTS = [{
 
@@ -124,7 +220,54 @@ export const DRINKS_PRODUCTS = [{
     ctaLink: '',
     linkUrl: '',
     show: false,
-}] satisfies Products.SingleProduct[]
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DRINK,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+}, {
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DRINK,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+}, {
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DRINK,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+}, {
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DRINK,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+}
+] satisfies Products.SingleProduct[]
 export const SIDE_DISH_PRODUCTS = [{
 
     id: uuid(),
@@ -135,7 +278,59 @@ export const SIDE_DISH_PRODUCTS = [{
     ctaLink: '',
     linkUrl: '',
     show: false,
-}] satisfies Products.SingleProduct[]
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.SIDE_DISH,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.SIDE_DISH,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.SIDE_DISH,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.SIDE_DISH,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+},
+
+
+] satisfies Products.SingleProduct[]
 export const DESERTS_PRODUCTS = [{
 
     id: uuid(),
@@ -146,5 +341,43 @@ export const DESERTS_PRODUCTS = [{
     ctaLink: '',
     linkUrl: '',
     show: false,
-}] satisfies Products.SingleProduct[]
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DESERT,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DESERT,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+},
+{
+
+    id: uuid(),
+    title: 'Prato 1',
+    description: 'Prato feito com amor e carinho',
+    linkImage: 'https://cdn.outback.com.br/wp-data/wp-content/uploads/2023/09/Outback-Momento-para-Dois-1792x1000-1.jpeg',
+    category: Product.Categories.DESERT,
+    ctaLink: '',
+    linkUrl: '',
+    show: false,
+    price: 12.00
+}
+] satisfies Products.SingleProduct[]
 
